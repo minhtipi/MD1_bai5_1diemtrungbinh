@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<h1>nhập điểm</h1><br>
+<label> điểm toán</label>
+<input id="diemToan" type="number">
+<label>điểm lý</label>
+<input id="diemLy" type="number">
+<label>điểm hóa</label>
+<input id="diemHoa" type="number"><br>
+
+<button onclick="diemTB()"> KQ</button>
+<h1 id="cmd"></h1>
+
+<script>
+  function diemTB() {
+    let toan = +document.getElementById('diemToan').value;
+    let ly = +document.getElementById('diemLy').value;
+    let hoa = +document.getElementById('diemHoa').value;
+    let diemTb = (toan + ly + hoa) / 3;
+    document.getElementById('cmd').innerHTML = "điểm trung bình: " + diemTb;
+
+  }
+
+  // let toan= +prompt('nhap diem toan: ');
+  // console.log('toan====>',toan)
+  // let ly= +prompt('nhap diem ly: ');
+  // let hoa= +prompt('nhap diem hoa: ');
+  // let diemTB=(toan+ly+hoa)/3;
+  // document.write('diem trung binh la: ' +diemTB)
+</script>
+</body>
+</html>
